@@ -1,0 +1,11 @@
+# Ignore everything by default
+*
+
+# Track these files
+!.zshrc
+!.zsh_aliases
+!.gitignore_dotfiles
+
+# Never track secrets or work-specific config
+.zsh_secrets
+.zsh_pelico
