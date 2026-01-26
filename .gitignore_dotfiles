@@ -1,11 +1,24 @@
 # Ignore everything by default
 *
 
-# Track these files
+# Shell config
 !.zshrc
 !.zsh_aliases
-!.gitignore_dotfiles
 
-# Never track secrets or work-specific config
+# Tmux
+!.tmux.conf
+
+# Config folder structure
+!.config/
+!.config/nvim/
+!.config/nvim/init.lua
+!.config/karabiner/
+!.config/karabiner/karabiner.json
+
+# Dotfiles management
+!.gitignore_dotfiles
+!.dotfiles_readme.md
+
+# Never track
 .zsh_secrets
 .zsh_pelico
