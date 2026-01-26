@@ -3,6 +3,7 @@ alias p="pnpm"
 alias c="code"
 alias d="docker"
 alias n="nvim"
+alias ask="chatgpt"
 
 # Git
 alias gitb="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy"

@@ -12,6 +12,11 @@
 !.config/
 !.config/nvim/
 !.config/nvim/init.lua
+!.config/nvim/lua/
+!.config/nvim/lua/**
+!.config/nvim/lua/plugins/
+!.config/nvim/lua/plugins/**
+!.vimrc
 !.config/karabiner/
 !.config/karabiner/karabiner.json
 
