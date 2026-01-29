@@ -12,11 +12,6 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnosti
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Diagnostics list" })
 
--- Treesitter context
-vim.keymap.set("n", "[c", function()
-  require("treesitter-context").go_to_context()
-end, { desc = "Jump to context" })
-
 -- Quick close for reference/quickfix lists
 vim.keymap.set("n", "<Esc>", "<cmd>cclose<CR><cmd>lclose<CR>", { desc = "Close quickfix/location list" })
 
@@ -72,7 +67,7 @@ vim.keymap.set("n", "<leader>cl", function()
   vim.cmd("normal! ]m")
   vim.cmd("normal! o")
   vim.api.nvim_put({ "console.log('" .. word .. "', " .. word .. ");" }, "l", false, true)
-end, { noremap = true, silent = true })
+end, { noremap = true, silent = true, desc = "Console.log word" })
 
 -- Toggle centered cursor
 vim.keymap.set('n', '<leader>zz', function()

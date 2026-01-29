@@ -16,16 +16,15 @@ return {
     end,
   },
   {
-    "nvim-treesitter/nvim-treesitter-context",
-    dependencies = "nvim-treesitter/nvim-treesitter",
+    "utilyre/barbecue.nvim",
+    name = "barbecue",
+    version = "*",
+    dependencies = {
+      "SmiteshP/nvim-navic",
+      "nvim-tree/nvim-web-devicons",
+    },
     config = function()
-      require("treesitter-context").setup({
-        enable = true,
-        max_lines = 3,
-        trim_scope = 'outer',
-        mode = 'cursor',
-        separator = nil,
-      })
+      require("barbecue").setup()
     end,
   },
 }

@@ -47,4 +47,25 @@ return {
       })
     end,
   },
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    config = function()
+      local wk = require("which-key")
+      wk.setup({
+        preset = "modern",
+        delay = 300,
+      })
+      wk.add({
+        { "<leader>f", group = "find/fix" },
+        { "<leader>g", group = "git" },
+        { "<leader>s", group = "search" },
+        { "<leader>S", group = "scratch" },
+        { "<leader>n", group = "neo-tree/notify" },
+        { "<leader>c", group = "code" },
+        { "<leader>b", group = "buffer/tree" },
+        { "<leader>w", group = "workspace" },
+      })
+    end,
+  },
 }
