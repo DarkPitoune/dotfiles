@@ -61,6 +61,8 @@ let g:fzf_layout = { 'down': '40%' }
 " ===========================================================================
 " KEYMAPS
 " ===========================================================================
+" Frequent typo when quitting, remap Q -> q
+cnoreabbrev Q q
 " Quick close for search highlight
 nnoremap <Esc> :nohlsearch<CR>
 

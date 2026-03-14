@@ -37,6 +37,7 @@ fi
 
 # Shell options
 set -o vi
+setopt CORRECT_ALL
 
 # Tools
 eval "$(zoxide init zsh)"
@@ -54,3 +55,12 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 [ -f "$HOME/.zsh_aliases" ] && source "$HOME/.zsh_aliases"
 [ -f "$HOME/.zsh_secrets" ] && source "$HOME/.zsh_secrets"
 [ -f "$HOME/.zsh_pelico" ] && source "$HOME/.zsh_pelico"
+
+echo "Explore new Stuff, Hack the World, Have fun!"
+
+# Android SDK
+export JAVA_HOME="/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home"
+export ANDROID_HOME="/opt/homebrew/share/android-commandlinetools"
+export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin:$JAVA_HOME/bin:$PATH"
+
+# Any line below this point was auto-generated, move/remove accordingly

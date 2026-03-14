@@ -4,6 +4,7 @@ alias c="code"
 alias d="docker"
 alias n="nvim"
 alias ask="chatgpt"
+alias cat="bat"
 
 # Git
 alias gitb="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy"

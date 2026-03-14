@@ -1,5 +1,7 @@
 -- Leader key
 vim.g.mapleader = " "
+-- Common typo, remap Q -> q
+vim.cmd([[cnoreabbrev Q q]])
 
 -- Editor options
 vim.opt.number = true
