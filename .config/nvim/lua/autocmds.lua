@@ -22,10 +22,10 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   end,
 })
 
--- Open neo-tree when opening a file/directory (not on empty nvim)
+-- Open neo-tree only when opening a directory (not a specific file)
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
-    if vim.fn.argc() > 0 then
+    if vim.fn.argc() > 0 and vim.fn.isdirectory(vim.fn.argv(0)) == 1 then
       require("neo-tree.command").execute({ action = "show" })
     end
   end,

@@ -56,7 +56,14 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 [ -f "$HOME/.zsh_secrets" ] && source "$HOME/.zsh_secrets"
 [ -f "$HOME/.zsh_pelico" ] && source "$HOME/.zsh_pelico"
 
-echo "Explore new Stuff, Hack the World, Have fun!"
+# Random greeting
+if [[ -f "$HOME/.zsh_greetings" ]]; then
+  greetings=("${(@f)$(< "$HOME/.zsh_greetings")}")
+  if [[ ${#greetings} -gt 0 ]]; then
+    greeting="${greetings[RANDOM % ${#greetings} + 1]}"
+    echo "\e[38;2;97;175;239m${greeting}\e[0m" # OneDark Blue #61afef
+  fi
+fi
 
 # Android SDK
 export JAVA_HOME="/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home"
@@ -64,3 +71,15 @@ export ANDROID_HOME="/opt/homebrew/share/android-commandlinetools"
 export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin:$JAVA_HOME/bin:$PATH"
 
 # Any line below this point was auto-generated, move/remove accordingly
+
+# --- swissknife configuration ---
+export PELICO_PROJECTS_PATH=~/Documents/code
+export PELICO_FRONT_PATH=~/Documents/code/pelico_front
+export PELICO_META_PATH=~/Documents/code/meta
+export PELICO_DEFAULT_USER=dhebrail
+export VM_NUMBER=01
+source ~/.secrets  # PELICO_DEFAULT_PASSWORD, GITLAB_TOKEN
+export SWISSKNIFE_NOTIFY=true
+export SWISSKNIFE_NERD_FONT=1
+# --- end swissknife configuration ---
+alias pelico-deployer=/Users/pierre.dhebrail/pelico-deployer-bin/venv/bin/pelico-deployer

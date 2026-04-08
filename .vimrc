@@ -34,6 +34,10 @@ set wildmenu
 set wildmode=longest:full,full
 set backspace=indent,eol,start
 
+" Cursor shape: line in insert mode, block in normal mode (tmux-aware)
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
 " Enable true colors if supported
 if has('termguicolors')
   set termguicolors
