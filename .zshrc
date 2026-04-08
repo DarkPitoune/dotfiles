@@ -1,3 +1,5 @@
+export LANG=en_US.UTF-8
+
 # Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
@@ -78,7 +80,7 @@ export PELICO_FRONT_PATH=~/Documents/code/pelico_front
 export PELICO_META_PATH=~/Documents/code/meta
 export PELICO_DEFAULT_USER=dhebrail
 export VM_NUMBER=01
-source ~/.secrets  # PELICO_DEFAULT_PASSWORD, GITLAB_TOKEN
+[ -f ~/.secrets ] && source ~/.secrets  # PELICO_DEFAULT_PASSWORD, GITLAB_TOKEN
 export SWISSKNIFE_NOTIFY=true
 export SWISSKNIFE_NERD_FONT=1
 # --- end swissknife configuration ---
