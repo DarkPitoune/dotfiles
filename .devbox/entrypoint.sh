@@ -20,6 +20,11 @@ if [ ! -d /home/pitoune/.dotfiles ]; then
     || echo "WARN: dotfiles clone failed, skipping"
 fi
 
+if [ ! -d /home/pitoune/.tmux/plugins/tpm ]; then
+  su - pitoune -c 'git clone https://github.com/tmux-plugins/tpm /home/pitoune/.tmux/plugins/tpm' \
+    || echo "WARN: TPM install failed, skipping"
+fi
+
 # Write machine-specific local configs (always overwrite)
 cat > /home/pitoune/.zshrc.local <<'EOF'
 PROMPT="%F{cyan}[devbox]%f %F{green}%n%f:%F{blue}%~%f$ "
