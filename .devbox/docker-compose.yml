@@ -1,0 +1,24 @@
+services:
+  devbox:
+    build: .
+    image: pitouneh/devbox:latest
+    container_name: devbox
+    hostname: devbox
+    restart: unless-stopped
+    ports:
+      - "2223:22"
+      - "3456:5173"
+    volumes:
+      - devbox-home:/home/pitoune
+      - /home/pitoune/.ssh/authorized_keys:/etc/ssh/authorized_keys:ro
+    mem_limit: 2g
+    healthcheck:
+      test: ["CMD", "bash", "-c", "echo > /dev/tcp/localhost/22"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  devbox-home:
+    driver: local

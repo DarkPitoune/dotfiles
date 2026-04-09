@@ -20,6 +20,10 @@
 !.config/karabiner/
 !.config/karabiner/karabiner.json
 
+# Devbox
+!.devbox/
+!.devbox/**
+
 # Dotfiles management
 !.gitignore_dotfiles
 !.dotfiles_readme.md
