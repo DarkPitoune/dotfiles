@@ -4,7 +4,11 @@ alias c="code"
 alias d="docker"
 alias n="nvim"
 alias ask="chatgpt"
-alias cat="bat"
+if command -v batcat &>/dev/null; then
+  alias cat="batcat"
+elif command -v bat &>/dev/null; then
+  alias cat="bat"
+fi
 
 # Git
 alias gitb="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy"
