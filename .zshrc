@@ -32,6 +32,8 @@ export NVM_DIR="$HOME/.nvm"
 # Editor
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
+  # Fix SSH agent forwarding in tmux after reconnect
+  export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 else
   export VISUAL='nvim'
   export EDITOR='vim'
