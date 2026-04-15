@@ -1,0 +1,27 @@
+[user]
+	name = Pierre d'Hébrail
+	email = p.dhebrail@proton.me
+[core]
+	editor = vim
+	pager = delta
+	excludesfile = ~/.gitignore_global
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+[rerere]
+	enabled = true
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	dark = true
+	features = TwoDark
+[merge]
+	conflictStyle = zdiff3
+[includeIf "hasconfig:remote.*.url:git@pelilab.pelico.tech:**"]
+	path = ~/.gitconfig-work
+[includeIf "hasconfig:remote.*.url:https://pelilab.pelico.tech/**"]
+	path = ~/.gitconfig-work
+[include]
+	path = ~/.gitconfig.local

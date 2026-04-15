@@ -5,6 +5,10 @@
 !.zshrc
 !.zsh_aliases
 
+# Git (shared + work-identity overlay; .gitconfig.local stays per-machine)
+!.gitconfig
+!.gitconfig-work
+
 # Tmux
 !.tmux.conf
 
