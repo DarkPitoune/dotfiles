@@ -8,6 +8,11 @@
 # Tmux
 !.tmux.conf
 
+# SSH: only the rc hook (keeps the agent-forward symlink fresh),
+# never private keys, known_hosts, authorized_keys, etc.
+!.ssh/
+!.ssh/rc
+
 # Config folder structure
 !.config/
 !.config/nvim/
