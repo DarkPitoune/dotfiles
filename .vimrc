@@ -33,6 +33,7 @@ set hlsearch
 set wildmenu
 set wildmode=longest:full,full
 set backspace=indent,eol,start
+set t_u7=
 
 " Cursor shape: line in insert mode, block in normal mode (tmux-aware)
 let &t_SI = "\e[6 q"
